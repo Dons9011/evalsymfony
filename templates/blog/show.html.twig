@@ -1,0 +1,19 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+
+<section class="articles"> 
+    <article>
+        <h1>{{article.title}}</h1>
+        <div class="dateArticle">Créé le {{article.createdAt | date('d/m/Y') }}</div>
+        <div class="contenuAllSaufDate">
+            <img src="{{article.image}}">
+            {{article.content | raw}}
+        </div>
+    </article>
+</section>
+
+{% endblock %}
